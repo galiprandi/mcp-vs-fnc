@@ -53,11 +53,12 @@ Fecha: Abril 2025
 ```mermaid
 graph TD
     A[Cliente externo] --> B[MCP Server]
-    B --> C{Obtener precio y stock}
-    B --> D[Invocar get_related_promotions(product_id)]
+    B --> C[Obtener precio y stock]
+    B --> D[Invocar get_related_promotions]
     D --> E[Modelo + reglas de negocio]
     E --> F[Lista de productos en oferta]
-    C & F --> G[Devolver respuesta unificada]
+    C --> G[Devolver respuesta unificada]
+    F --> G
 ```
 
 **Roles claros:**
