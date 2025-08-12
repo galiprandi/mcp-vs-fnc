@@ -3,6 +3,7 @@ title: 🔌 MCP Server vs 🧠 Function Calling
 subtitle: Patrones Complementarios en Sistemas de IA
 author: Germán Aliprandi
 date: Abril 2025
+license: Licencia MIT
 
 theme: geist
 colorSchema: light
@@ -32,8 +33,11 @@ seoMeta:
 **Caso de uso:** Exponer productos, precios y recomendaciones inteligentes a clientes externos
 
 <div class="mt-10 text-l">
-<b>{{ $frontmatter.author }}</b><br>
+<b>{{ $frontmatter.author }}</b>
+<br>
 {{ $frontmatter.date }}
+<br>
+{{ $frontmatter.license }}
 </div>
 
 <div class="absolute bottom-8 right-8 text-l bg-black/10 px-4 py-2 rounded-full">
