@@ -36,8 +36,7 @@ seoMeta:
 {{ $frontmatter.date }}
 </div>
 
-
-<div class="absolute bottom-8 right-8 text-xl bg-black/10 px-4 py-2 rounded-full">
+<div class="absolute bottom-8 right-8 text-l bg-black/10 px-4 py-2 rounded-full">
   ➡️ Navega con la flecha derecha del teclado
 </div>
 
