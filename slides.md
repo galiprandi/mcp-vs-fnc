@@ -1,6 +1,7 @@
 ---
-title: MCP Server vs Function Calling – Patrones Complementarios en Sistemas de IA
-author: Tu Nombre - Cencosud
+title: MCP Server vs Function Calling
+subtitle: Patrones Complementarios en Sistemas de IA
+author: Germán Aliprandi
 theme: geist
 colorSchema: light
 canvasWidth: 1280
@@ -11,18 +12,19 @@ defaults:
   transition: fade
 
 seoMeta:
-  ogTitle: "MCP Server vs Function Calling – Patrones Complementarios en Sistemas de IA"
+  ogTitle: "MCP Server vs Function Calling"
   ogDescription: "Entendiendo cuándo usar MCP Servers como puertos de I/O y Function Calling para lógica interna, con un caso de uso real en retail."
   ogUrl: "https://cencosud-tech.github.io/mcp-vs-function-calling"
 ---
 
-# MCP Server vs Function Calling  
-### Patrones Complementarios en Sistemas de IA
+# {{ $frontmatter.title }} 
+### {{ $frontmatter.subtitle }}
 
 **Caso de uso:** Exponer productos, precios y recomendaciones inteligentes a clientes externos
 
 <div class="mt-10 text-sm">
-Presentado por: <b>Tu Nombre</b> – Cencosud<br>
+Presentado por: <b>{{ $frontmatter.author }}</b>
+<br>
 Fecha: Abril 2025
 </div>
 
@@ -51,7 +53,7 @@ Fecha: Abril 2025
 ## Slide 2: Flujo del Sistema
 
 ```mermaid
-graph TD
+graph LR
     A[Cliente externo] --> B[MCP Server]
     B --> C[Obtener precio y stock]
     B --> D[Invocar get_related_promotions]
@@ -63,7 +65,7 @@ graph TD
 
 **Roles claros:**
 - **MCP**: Orquesta, valida, responde.
-- **Function Calling**: Ejecuta lógica compleja (recomendaciones).
+- **Function Calling**: Ejecuta lógica compleja e inteligente (recomendaciones).
 
 🎯 **Pregunta:**  
 ¿Qué pasa si la función `get_related_promotions` falla? ¿Devolver solo el producto o fallar todo?
