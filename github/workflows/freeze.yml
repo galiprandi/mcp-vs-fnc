@@ -1,0 +1,18 @@
+# .github/workflows/freeze.yml
+name: Release Freeze
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        options: [lock, unlock]
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: galiprandi/bash/src/actions/branch-lock@main
+        with:
+          action: ${{ inputs.action }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
