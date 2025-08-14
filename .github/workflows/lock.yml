@@ -16,12 +16,16 @@ jobs:
   branch-lock:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Prepare config
         run: |
-           cp ./branch-lock.yaml branch-lock.yaml
+          cp ./branch-lock.yaml branch-lock.yaml
+
       - name: 🔐 Run branch-lock
         uses: galiprandi/bash/src/actions/branch-lock@main
         with:
           action: ${{ inputs.action }}
-          config-file: .github/branch-lock.yaml
+          config-file: branch-lock.yaml  # o usa .github/branch-lock.yaml si está allí
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
