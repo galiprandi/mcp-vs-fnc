@@ -1,0 +1,24 @@
+# .github/workflows/lock.yml
+name: Branch Lock
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        description: 'Select action to perform'
+        options:
+          - lock
+          - unlock
+        required: true
+
+jobs:
+  branch-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔐 Run branch-lock
+        uses: galiprandi/bash/src/actions/branch-lock@main
+        with:
+          action: ${{ inputs.action }}
+          config-file: .github/branch-lock.yaml
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}

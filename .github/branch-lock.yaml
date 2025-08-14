@@ -1,0 +1,10 @@
+# .github/branch-lock.yaml
+repositories:
+  - org: galiprandi
+    repo: mcp-vs-fnc
+    branch: main
+
+lock:
+  required_approvals: 6
+unlock:
+  required_approvals: 0
