@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0
 
       - name: Smart Doc
-        uses: galiprandi/smart-doc@v1.0.1
+        uses: galiprandi/smart-doc@v1.0.2
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           model: gpt-5-mini
